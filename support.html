@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — PhoneticSleep</title>
+<style>
+  :root { --bg:#0D0B2A;--bg2:#1A1060;--accent:#A78BFA;--accent2:#60A5FA;--text:#F1F0FF;--muted:rgba(241,240,255,0.55);--card:rgba(255,255,255,0.05);--border:rgba(255,255,255,0.1);--radius:14px; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);min-height:100vh;color:var(--text);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--border);backdrop-filter:blur(12px);background:rgba(13,11,42,0.8);position:sticky;top:0;z-index:10;}
+  .logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:700;text-decoration:none;color:var(--text);}
+  nav a{color:var(--muted);text-decoration:none;font-size:0.9rem;margin-left:28px;}
+  nav a:hover{color:var(--accent);}
+  .container{max-width:800px;margin:0 auto;padding:60px 24px 80px;}
+  h1{font-size:2.4rem;font-weight:900;margin-bottom:12px;}
+  .subtitle{color:var(--muted);font-size:1.05rem;margin-bottom:48px;}
+  h2{font-size:1.1rem;font-weight:700;margin:32px 0 16px;color:var(--accent);}
+  p{font-size:0.95rem;color:rgba(241,240,255,0.8);line-height:1.8;margin-bottom:12px;}
+  .contact-card{background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.1));border:1px solid rgba(167,139,250,0.3);border-radius:20px;padding:36px;text-align:center;margin-bottom:48px;}
+  .contact-card h2{margin:0 0 10px;color:var(--text);font-size:1.4rem;}
+  .contact-card p{margin-bottom:24px;}
+  .btn{display:inline-block;padding:14px 32px;border-radius:100px;font-size:0.95rem;font-weight:600;text-decoration:none;background:var(--accent);color:#0D0B2A;transition:all 0.2s;}
+  .btn:hover{background:#C4B5FD;transform:translateY(-2px);}
+  details{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden;}
+  summary{padding:18px 20px;cursor:pointer;font-size:0.95rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--card);}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:'＋';font-size:1.1rem;color:var(--accent);transition:transform 0.2s;}
+  details[open] summary::after{transform:rotate(45deg);}
+  details[open] summary{background:rgba(167,139,250,0.1);}
+  .faq-body{padding:18px 20px;font-size:0.9rem;color:rgba(241,240,255,0.75);line-height:1.8;border-top:1px solid var(--border);}
+  footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);color:var(--muted);font-size:0.85rem;}
+  footer a{color:var(--accent);text-decoration:none;margin:0 12px;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">🌙 PhoneticSleep</a>
+  <div>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="support.html" style="color:var(--accent)">Support</a>
+  </div>
+</nav>
+<div class="container">
+  <h1>Support</h1>
+  <p class="subtitle">We're here to help. Most questions are answered below — or email us directly.</p>
+
+  <div class="contact-card">
+    <h2>📬 Contact Us</h2>
+    <p>Have a question, bug report, or feedback? We typically reply within 24 hours.</p>
+    <a href="mailto:cengizyilmazturk@gmail.com?subject=PhoneticSleep Support" class="btn">Send Email</a>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>Does sleep learning actually work?</summary>
+    <div class="faq-body">Research on Targeted Memory Reactivation (TMR) shows that playing audio cues during sleep can reinforce memories formed while awake. PhoneticSleep uses this principle — consistent exposure to phoneme sounds during light sleep phases helps your brain familiarize with new sound patterns. Results vary by individual, sleep quality, and prior language exposure.</div>
+  </details>
+
+  <details>
+    <summary>My purchase isn't showing up. What do I do?</summary>
+    <div class="faq-body">Go to the app's Settings tab → tap "Restore Purchases". This will reconnect your App Store account and restore any previous purchases. Make sure you're signed in with the same Apple ID you used to purchase.</div>
+  </details>
+
+  <details>
+    <summary>The app isn't playing sound while my screen is off.</summary>
+    <div class="faq-body">Make sure Background App Refresh is enabled for PhoneticSleep in iOS Settings → General → Background App Refresh. Also check that the ringer switch on your iPhone is not set to silent, or use headphones. Low Power Mode can also interrupt background audio.</div>
+  </details>
+
+  <details>
+    <summary>The alarm notification didn't fire at the right time.</summary>
+    <div class="faq-body">Check that PhoneticSleep has notification permissions: iOS Settings → PhoneticSleep → Notifications → Allow Notifications must be on. Also ensure Do Not Disturb settings allow notifications from the app. If the issue persists, delete and re-set the alarm.</div>
+  </details>
+
+  <details>
+    <summary>How do I cancel a subscription?</summary>
+    <div class="faq-body">PhoneticSleep subscriptions are managed through Apple. Go to iOS Settings → your Apple ID → Subscriptions → PhoneticSleep → Cancel Subscription. You can also manage subscriptions at reportaproblem.apple.com.</div>
+  </details>
+
+  <details>
+    <summary>How loud should I set the volume for sleep learning?</summary>
+    <div class="faq-body">We recommend 20–30% volume — just barely audible while lying in bed. The sounds should be present but not disruptive. Too loud can interrupt sleep quality, which is counterproductive. Start low and adjust over a few nights.</div>
+  </details>
+
+  <details>
+    <summary>Which theta frequency should I use?</summary>
+    <div class="faq-body">6 Hz is the default and works well for most users. If you have trouble falling asleep, try 4–5 Hz (deeper, slower). If you're learning during light relaxation before sleep, 7–8 Hz is more appropriate. Experiment to find what works best for you.</div>
+  </details>
+
+  <details>
+    <summary>Can I use PhoneticSleep with headphones?</summary>
+    <div class="faq-body">Yes — and binaural beats work best with headphones. The binaural effect requires separate audio in each ear. Without headphones, both channels are mixed and the binaural effect is reduced. We recommend sleep-specific earbuds or flat-profile headphones for comfort.</div>
+  </details>
+
+  <details>
+    <summary>How do I delete my data?</summary>
+    <div class="faq-body">PhoneticSleep stores all data locally on your device. To delete all data, simply delete the app from your iPhone or iPad. There is no account or server data to request deletion of.</div>
+  </details>
+
+  <details>
+    <summary>The app crashed. How do I report it?</summary>
+    <div class="faq-body">Please email us at cengizyilmazturk@gmail.com with your iOS version, iPhone model, and a description of what you were doing when the crash occurred. If possible, attach the crash log from iOS Settings → Privacy → Analytics & Improvements → Analytics Data.</div>
+  </details>
+</div>
+<footer>
+  © 2025 PhoneticSleep.
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+</footer>
+</body>
+</html>
