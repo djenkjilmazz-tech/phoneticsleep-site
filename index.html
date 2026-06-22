@@ -3,22 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PhoneticSleep</title>
+<title>PhoneticSleep — Learn Languages While You Sleep</title>
 <style>
-  body { font-family: -apple-system, sans-serif; max-width: 700px; margin: 80px auto; padding: 0 20px; color: #333; text-align: center; }
-  h1 { color: #1a1a2e; font-size: 2.5em; }
-  a { color: #7c3aed; text-decoration: none; margin: 0 16px; font-size: 1.1em; }
-  a:hover { text-decoration: underline; }
-  .links { margin-top: 40px; }
-  p { color: #666; }
+  :root {
+    --bg: #0D0B2A;
+    --bg2: #1A1060;
+    --accent: #A78BFA;
+    --accent2: #60A5FA;
+    --text: #F1F0FF;
+    --muted: rgba(241,240,255,0.55);
+    --card: rgba(255,255,255,0.05);
+    --border: rgba(255,255,255,0.1);
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 50%, #2D1B69 100%);
+    min-height: 100vh;
+    color: var(--text);
+  }
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 48px;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(13,11,42,0.8);
+  }
+  .logo { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 700; }
+  .logo span { font-size: 1.4rem; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 28px; transition: color 0.2s; }
+  nav a:hover { color: var(--accent); }
+  .hero {
+    text-align: center; padding: 100px 24px 80px;
+    max-width: 800px; margin: 0 auto;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(167,139,250,0.15);
+    border: 1px solid rgba(167,139,250,0.4);
+    color: var(--accent);
+    padding: 6px 18px; border-radius: 100px;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 28px;
+  }
+  h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+  h1 .grad {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .subtitle { font-size: 1.15rem; color: var(--muted); line-height: 1.7; margin-bottom: 44px; }
+  .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    padding: 14px 32px; border-radius: 100px; font-size: 0.95rem; font-weight: 600;
+    text-decoration: none; transition: all 0.2s; cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--accent); color: #0D0B2A;
+  }
+  .btn-primary:hover { background: #C4B5FD; transform: translateY(-2px); }
+  .btn-secondary {
+    background: var(--card); color: var(--text); border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+  .features {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px; max-width: 1100px; margin: 0 auto 80px; padding: 0 24px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px;
+  }
+  .card-icon { font-size: 2rem; margin-bottom: 14px; }
+  .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+  .card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+  .langs {
+    text-align: center; padding: 60px 24px; max-width: 700px; margin: 0 auto;
+  }
+  .lang-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; }
+  .lang-pill {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 100px; padding: 10px 20px;
+    font-size: 0.95rem; display: flex; align-items: center; gap: 8px;
+  }
+  footer {
+    text-align: center; padding: 40px 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.85rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; margin: 0 12px; }
+  footer a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
-<h1>🌙 PhoneticSleep</h1>
-<p>Learn languages through phonetic frequencies while you sleep.</p>
-<div class="links">
-  <a href="privacy.html">Privacy Policy</a>
-  <a href="terms.html">Terms of Use</a>
+
+<nav>
+  <div class="logo"><span>🌙</span> PhoneticSleep</div>
+  <div>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="support.html">Support</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="badge">Sleep Learning App</div>
+  <h1>Learn Languages<br><span class="grad">While You Sleep</span></h1>
+  <p class="subtitle">
+    PhoneticSleep uses theta waves, binaural beats, and phoneme synthesis to
+    reinforce language learning during sleep — backed by neuroscience.
+  </p>
+  <div class="cta-group">
+    <a href="#" class="btn btn-primary">Download on the App Store</a>
+    <a href="support.html" class="btn btn-secondary">Learn More</a>
+  </div>
+</section>
+
+<div class="features">
+  <div class="card">
+    <div class="card-icon">🌊</div>
+    <h3>Theta Waves (4–8 Hz)</h3>
+    <p>Background theta frequencies promote deep relaxation and memory consolidation during sleep.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">👂</div>
+    <h3>Binaural Beats</h3>
+    <p>Slightly different frequencies in each ear entrain your brain to the optimal learning state.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🔬</div>
+    <h3>Formant Synthesis</h3>
+    <p>Every phoneme is synthesized using real IPA formant frequencies — not recordings, pure acoustics.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">⏰</div>
+    <h3>Smart Wake-Up Alarm</h3>
+    <p>Set your morning alarm and wake up naturally after a full night of phonetic exposure.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🧩</div>
+    <h3>Language Logic Patterns</h3>
+    <p>Root families, vowel harmony, minimal pairs — learn the structural logic of your target language.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">📊</div>
+    <h3>Morning Quiz</h3>
+    <p>Test your overnight retention with targeted phoneme quizzes right after you wake up.</p>
+  </div>
 </div>
+
+<div class="langs">
+  <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:10px;">7 Languages</h2>
+  <p style="color:var(--muted);">Start with any language tonight.</p>
+  <div class="lang-grid">
+    <div class="lang-pill">🇸🇦 Arabic</div>
+    <div class="lang-pill">🇬🇧 English</div>
+    <div class="lang-pill">🇫🇷 French</div>
+    <div class="lang-pill">🇩🇪 German</div>
+    <div class="lang-pill">🇯🇵 Japanese</div>
+    <div class="lang-pill">🇪🇸 Spanish</div>
+    <div class="lang-pill">🇹🇷 Turkish</div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 PhoneticSleep. All rights reserved.</p>
+  <p style="margin-top:12px;">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="support.html">Support</a>
+  </p>
+</footer>
+
 </body>
 </html>

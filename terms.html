@@ -3,49 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use – PhoneticSleep</title>
+<title>Terms of Use — PhoneticSleep</title>
 <style>
-  body { font-family: -apple-system, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
-  h1 { color: #1a1a2e; } h2 { color: #444; margin-top: 2em; }
-  a { color: #7c3aed; }
+  :root { --bg:#0D0B2A;--bg2:#1A1060;--accent:#A78BFA;--text:#F1F0FF;--muted:rgba(241,240,255,0.55);--card:rgba(255,255,255,0.05);--border:rgba(255,255,255,0.1); }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);min-height:100vh;color:var(--text);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--border);backdrop-filter:blur(12px);background:rgba(13,11,42,0.8);position:sticky;top:0;z-index:10;}
+  .logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:700;text-decoration:none;color:var(--text);}
+  nav a{color:var(--muted);text-decoration:none;font-size:0.9rem;margin-left:28px;}
+  nav a:hover{color:var(--accent);}
+  .container{max-width:760px;margin:0 auto;padding:60px 24px 80px;}
+  .meta{font-size:0.8rem;color:var(--muted);margin-bottom:8px;letter-spacing:0.1em;text-transform:uppercase;}
+  h1{font-size:2.4rem;font-weight:900;margin-bottom:12px;}
+  .updated{font-size:0.85rem;color:var(--muted);margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid var(--border);}
+  h2{font-size:1.25rem;font-weight:700;margin:40px 0 14px;color:var(--accent);}
+  p{font-size:0.95rem;color:rgba(241,240,255,0.8);line-height:1.8;margin-bottom:14px;}
+  ul{padding-left:20px;margin-bottom:14px;}
+  li{font-size:0.95rem;color:rgba(241,240,255,0.8);line-height:1.8;margin-bottom:6px;}
+  a{color:var(--accent);}
+  footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);color:var(--muted);font-size:0.85rem;}
+  footer a{color:var(--accent);text-decoration:none;margin:0 12px;}
 </style>
 </head>
 <body>
-<h1>Terms of Use</h1>
-<p><strong>Effective date:</strong> June 22, 2026</p>
-<p>Please read these Terms of Use carefully before using PhoneticSleep. By downloading or using the app, you agree to these terms.</p>
+<nav>
+  <a href="index.html" class="logo">🌙 PhoneticSleep</a>
+  <div>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html" style="color:var(--accent)">Terms</a>
+    <a href="support.html">Support</a>
+  </div>
+</nav>
+<div class="container">
+  <div class="meta">Legal</div>
+  <h1>Terms of Use</h1>
+  <div class="updated">Last updated: June 16, 2025</div>
 
-<h2>1. License</h2>
-<p>PhoneticSleep grants you a limited, non-exclusive, non-transferable license to use this app for personal, non-commercial purposes on Apple devices you own or control.</p>
+  <h2>1. Acceptance of Terms</h2>
+  <p>By downloading or using PhoneticSleep ("the App"), you agree to be bound by these Terms of Use. If you do not agree, do not use the App.</p>
 
-<h2>2. Subscriptions</h2>
-<p>PhoneticSleep offers auto-renewable subscriptions (monthly and annual) for Pro features:</p>
-<ul>
-  <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
-  <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.</li>
-  <li>You can manage and cancel subscriptions in your Apple ID Account Settings.</li>
-  <li>No refunds are provided for partial subscription periods.</li>
-</ul>
+  <h2>2. License</h2>
+  <p>Subject to these terms, we grant you a limited, non-exclusive, non-transferable license to download and use the App for personal, non-commercial purposes on Apple devices you own or control.</p>
+  <p>You may not:</p>
+  <ul>
+    <li>Copy, modify, or distribute the App</li>
+    <li>Reverse engineer or decompile the App</li>
+    <li>Use the App for commercial purposes without written permission</li>
+    <li>Remove any copyright or proprietary notices</li>
+  </ul>
 
-<h2>3. Free Trial</h2>
-<p>A 3-day free trial may be offered. If you do not cancel before the trial ends, the subscription price will be charged.</p>
+  <h2>3. In-App Purchases</h2>
+  <p>PhoneticSleep offers optional in-app purchases to unlock premium features. All purchases are processed by Apple through the App Store. We do not store payment information.</p>
+  <p>Purchases are final and non-refundable except as required by applicable law or Apple's refund policies. To request a refund, contact Apple directly at <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>.</p>
+  <p>Previously purchased content can be restored at any time using the "Restore Purchases" feature in the app at no additional charge.</p>
 
-<h2>4. Prohibited Uses</h2>
-<p>You may not: reverse-engineer the app, use it for any unlawful purpose, or redistribute the app or its content.</p>
+  <h2>4. App Store EULA</h2>
+  <p>Your use of the App is also subject to Apple's Standard End User License Agreement (EULA), available at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">apple.com/legal/internet-services/itunes/dev/stdeula</a>.</p>
 
-<h2>5. Disclaimer</h2>
-<p>PhoneticSleep is provided "as is" without warranties of any kind. We do not guarantee that language learning outcomes will be achieved through use of the app.</p>
+  <h2>5. Disclaimer of Warranties</h2>
+  <p>The App is provided "as is" without warranties of any kind. We do not guarantee that sleep learning will produce specific language acquisition results. Individual outcomes vary based on sleep quality, existing language knowledge, and other factors.</p>
+  <p>THE APP IS NOT A MEDICAL DEVICE. It is not intended to diagnose, treat, cure, or prevent any condition. Consult a healthcare professional if you have sleep disorders or hearing concerns.</p>
 
-<h2>6. Limitation of Liability</h2>
-<p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the app.</p>
+  <h2>6. Limitation of Liability</h2>
+  <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App.</p>
 
-<h2>7. Governing Law</h2>
-<p>These terms are governed by the laws of Turkey. Disputes shall be resolved in the courts of Istanbul, Turkey.</p>
+  <h2>7. Intellectual Property</h2>
+  <p>All content in the App, including the IPA phoneme database, audio synthesis algorithms, and user interface design, is owned by PhoneticSleep and protected by copyright law.</p>
 
-<h2>8. Changes</h2>
-<p>We may update these Terms from time to time. Continued use of the app after changes constitutes acceptance of the new Terms.</p>
+  <h2>8. Changes to Terms</h2>
+  <p>We reserve the right to modify these terms at any time. Continued use after changes constitutes acceptance.</p>
 
-<h2>9. Contact</h2>
-<p>Questions? Contact us at: <a href="mailto:cengizyilmazturk@gmail.com">cengizyilmazturk@gmail.com</a></p>
+  <h2>9. Governing Law</h2>
+  <p>These terms are governed by the laws of the Republic of Turkey. Any disputes shall be resolved in Turkish courts.</p>
+
+  <h2>10. Contact</h2>
+  <p><a href="mailto:cengizyilmazturk@gmail.com">cengizyilmazturk@gmail.com</a></p>
+</div>
+<footer>
+  © 2025 PhoneticSleep.
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="support.html">Support</a>
+</footer>
 </body>
 </html>
