@@ -60,36 +60,39 @@
 <div class="container">
   <div class="meta">Legal</div>
   <h1>Privacy Policy</h1>
-  <div class="updated">Last updated: September 5, 2026</div>
+  <div class="updated">Last updated: October 11, 2026</div>
 
   <div class="highlight">
     <p>📋 <strong>Summary:</strong> What you study stays on your device. PhoneticSleep has no account, no server backend, and never uploads your learning data, your voice, or your health data. The one exception is advertising: the free version shows banner and interstitial ads served by Google AdMob, which receives device and usage data in order to serve them. A subscription removes the ads.</p>
   </div>
 
   <h2>1. Information We Collect</h2>
+  <p>This policy covers PhoneticSleep for <strong>iOS</strong> and for <strong>Android</strong>. Where the two differ, both are described.</p>
   <p>PhoneticSleep does <strong>not</strong> collect any personally identifiable information, and there is no sign-in.</p>
   <p>The app stores the following <strong>locally on your device only</strong>:</p>
   <ul>
-    <li>App preferences (voice, sound-bed frequency, volume, cue schedule) via iOS UserDefaults</li>
-    <li>Your study sets, night sessions and morning test scores, stored on device with SwiftData</li>
+    <li>App preferences (voice, sound-bed frequency, volume, cue schedule) via iOS UserDefaults, or Android SharedPreferences</li>
+    <li>Your study sets, night sessions and morning test scores, stored on device with SwiftData (iOS) or in a file in the app's private storage (Android)</li>
     <li>Wake-up alarm time</li>
   </ul>
   <p>None of this is transmitted to us or to any third party. We have no server that could receive it.</p>
 
-  <h2>2. Health Data (HealthKit)</h2>
+  <h2>2. Health Data (Apple Health / Android Health Connect)</h2>
   <p>If you grant permission, PhoneticSleep reads <strong>sleep stage data for the previous night</strong> (awake, REM, core, deep) from Apple Health, in order to annotate your morning test result — for example, to show how much deep sleep overlapped the period when cues were played.</p>
   <ul>
-    <li>Access is <strong>read-only</strong>. The app never writes anything to Apple Health.</li>
+    <li>On Android, the same data is read from <strong>Health Connect</strong>: only the sleep session permission (<code>READ_SLEEP</code>) is requested, and only sleep stages (awake, REM, light, deep) for the night of a session are read. Light sleep is shown as "core".</li>
+    <li>Access is <strong>read-only</strong>. The app never writes anything to Apple Health or Health Connect.</li>
     <li>Health data is read on your device, shown to you, and never transmitted anywhere.</li>
     <li>Health data is <strong>never used for advertising</strong>, never shared with third parties, and never used to trigger anything while you sleep.</li>
     <li>Permission is entirely optional. If you decline, the app works normally and that section stays empty.</li>
-    <li>You can revoke access at any time in Settings → Privacy &amp; Security → Health → PhoneticSleep.</li>
+    <li>You can revoke access at any time in Settings → Privacy &amp; Security → Health → PhoneticSleep (iOS), or in the Health Connect app → App permissions → PhoneticSleep (Android).</li>
+    <li>On Android, PhoneticSleep's use of information received from Health Connect adheres to the <a href="https://support.google.com/googleplay/android-developer/answer/9888170">Health Connect Permissions policy</a>, including the Limited Use requirements.</li>
   </ul>
 
   <h2>3. Microphone and Speech Recognition</h2>
   <p>The optional "Say it" pronunciation check records a few seconds of audio when — and only when — you tap the record button.</p>
   <ul>
-    <li>Recognition runs <strong>on your device</strong> using Apple's on-device speech recogniser.</li>
+    <li>Recognition runs <strong>on your device</strong>: Apple's on-device speech recogniser on iOS; on Android, only the system's on-device recogniser (Android 12 or later) is used. If on-device recognition is not available for a language, the check is not offered — audio is never sent to a server-based recogniser.</li>
     <li>The audio is not saved to disk and is discarded as soon as the check finishes.</li>
     <li>No recording or transcript is sent to us or to any third party.</li>
     <li>The microphone is never used during a night session.</li>
@@ -97,15 +100,18 @@
 
   <h2>4. Audio Playback</h2>
   <p>All speech in the app is synthesised on your device from formant data using a source–filter model. The app contains no recordings of speakers. The optional binaural sound bed is generated in real time.</p>
-  <p>The app uses the background audio capability so playback can continue while the screen is off during a night session. It is used solely to keep the audio session alive.</p>
+  <p>The app uses the background audio capability (iOS) or a media-playback foreground service with an ongoing notification (Android) so playback can continue while the screen is off during a night session. It is used solely to keep the audio session alive.</p>
 
   <h2>5. Notifications and Alarms</h2>
-  <p>If you enable the wake-up alarm, PhoneticSleep uses AlarmKit (iOS 26 and later) or a local notification. These are scheduled and delivered entirely on your device; no data is sent anywhere to process them.</p>
+  <p>If you enable the wake-up alarm, PhoneticSleep uses AlarmKit (iOS 26 and later) or a local notification on iOS, and the system alarm scheduler with a local notification on Android. Daily study and morning-test reminders are also local notifications. These are scheduled and delivered entirely on your device; no data is sent anywhere to process them.</p>
 
   <h2>6. Third-Party Services</h2>
   <p><strong>Google AdMob.</strong> The free version of PhoneticSleep displays banner and interstitial advertisements supplied by Google AdMob. To serve and measure ads, Google receives technical and usage information such as device model, operating system version, coarse region, and ad interactions. This is governed by Google's own privacy policy: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
   <p>PhoneticSleep does <strong>not</strong> ask for App Tracking Transparency permission and does not use the advertising identifier (IDFA) to track you across other companies' apps and websites. Your study data, your voice and your health data are never shared with the ad service.</p>
+  <p><strong>Ad consent (EEA, UK, Switzerland).</strong> On both iPhone and Android, if you are in the European Economic Area, the United Kingdom or Switzerland, PhoneticSleep asks for your consent with Google's consent form (User Messaging Platform) before any ad is requested; until you choose, no ads are loaded. You can change your choice at any time under Settings → Privacy &amp; Legal → Privacy choices.</p>
+  <p><strong>On Android</strong>, the same Google Mobile Ads SDK is used for banner and interstitial ads. PhoneticSleep removes the Android advertising ID permission from the app, so the ad SDK cannot read your advertising ID. Google may still use device and usage data as described in its policy above.</p>
   <p>Purchasing a subscription removes all advertising.</p>
+  <p><strong>Google Play.</strong> On Android, subscriptions are processed by Google through Google Play Billing. We never see or receive your payment details; see Google's privacy policy for how Google handles that transaction.</p>
   <p><strong>Apple.</strong> Subscriptions are processed by Apple through StoreKit. We never see or receive your payment details. See Apple's privacy policy for how Apple handles that transaction.</p>
 
   <h2>6a. Data We Do NOT Collect</h2>
@@ -114,12 +120,12 @@
     <li>No precise location</li>
     <li>No stored voice recordings or transcripts</li>
     <li>No health data leaving your device</li>
-    <li>No cross-app or cross-site tracking, and no IDFA-based tracking</li>
+    <li>No cross-app or cross-site tracking, and no IDFA- or Android advertising ID-based tracking</li>
     <li>No analytics service of our own</li>
   </ul>
 
   <h2>7. Data Security</h2>
-  <p>Since all data is stored locally on your device, your data is protected by your device's built-in security mechanisms (passcode, Face ID, etc.). Deleting the app removes all locally stored data permanently.</p>
+  <p>Since all data is stored locally on your device, your data is protected by your device's built-in security mechanisms (passcode, Face ID, screen lock, etc.). Deleting the app removes all locally stored data permanently.</p>
 
   <h2>8. Changes to This Policy</h2>
   <p>We may update this Privacy Policy from time to time. The latest version will always be available at this URL. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
